@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+	[ node distance=1mm and 15mm,
+		construct/.style={rectangle,draw,text width=2.4cm,minimum height=3em,text centered},
+		arrowOut/.style={->,shorten >=1pt,>=stealth',semithick},
+		arrowIn/.style={<-,shorten <=1pt,>=stealth',semithick}]
+	
+	\node[construct] 									(net benefits) {Net Benefits};
+	
+	\node[construct,text width=8mm]	(use) [above left=of net benefits] {Use};
+	\node[construct,text width=18mm,node distance=1mm and 0mm] (intention) [left=of use] {Intention to Use};
+	\node[rectangle,fit=(use)(intention),inner sep=0pt] (use combo) [above left=of net benefits] {}
+		edge[arrowOut] (net benefits);
+	
+	\node[construct,text width=29mm] 	(user sat) [below left=of net benefits] {User Satisfaction}
+		edge[arrowOut]	(net benefits);
+		
+	\node[construct] (info qual) [above left=of use combo] {Information Quality}
+		edge[arrowOut] 	(use combo.north west)
+		edge[arrowOut] 	(user sat.north west);
+	\node[construct] (sys qual) [below left=of use combo] {System Quality}
+		edge[arrowOut] 	(use combo.west)
+		edge[arrowOut] 	(user sat.west);
+	\node[construct] (ser qual) [below left=of user sat] {Service Quality}
+		edge[arrowOut] 	(use combo.south west)
+		edge[arrowOut] 	(user sat.south west);
+		
+	\draw[arrowOut] (net benefits) -- (0,3) -| (intention);
+	\draw[arrowOut] (net benefits) -- (0,-3) -| (user sat);
+	\draw[arrowOut] (use) -- ([xshift=10.5mm] user sat.north);
+	\draw[arrowOut] ([xshift=-5.4mm] user sat.north) -- (intention);
+\end{tikzpicture}

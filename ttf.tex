@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	[ node distance=2mm and 1.2cm,
+		concept/.style={rectangle,draw,text width=3cm,minimum height=3em,text centered},
+		arrowOut/.style={->,shorten >=1pt,>=stealth',semithick},
+		arrowIn/.style={<-,>=stealth',semithick}]
+		
+	\node[concept] (performance) {Performance Impacts};
+	\node[concept] (fit) [above left=of performance] {Task-Technology Fit}
+			edge[arrowOut] 	(performance);
+	\node[concept] (utilization) [below left=of performance] {Utilization}
+			edge[arrowOut] 	(performance)
+			edge[arrowIn] 	(fit);
+	\node[concept] (task) [above left=of fit] {Task\\ Characteristics}
+			edge[arrowOut] 	(fit);
+	\node[concept] (technology) [below left=of fit] {Technology Characteristics}
+			edge[arrowOut] 	(fit);
+\end{tikzpicture}

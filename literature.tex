@@ -1,0 +1,230 @@
+\chapter{Literature Review}
+\label{chap:litrev}
+In the first section of this chapter, theories relevant to this thesis will be discussed. These theories explain constructs such as information systems success and task-technology fit. These are pertinent to emphasizing the importance of good usability and informing the theoretical aspect of this thesis.
+
+The second section will address existing research in the area of customer relationship management systems with special emphasis on known usability issues and leading products in the industry.
+
+The third section of this chapter will give an overview of research in the area of usability heuristics and the most important and relevant works. As stated previously, a number of studies \citep[e.g.][]{Molich1990,Leavitt2006,Weiss1994} have addressed the need for usability heuristics for desktop and web-based applications in general, as well as specific classes of web applications such as e-learning and e-commerce sites.
+
+\section{Theories}
+\label{sec:theories}
+While conducting the literature review, no theories pertinent to developing heuristics for specific types of applications or for evaluating existing heuristics in terms of their applicability to a type of applications were found. There are, however, theories which explain the role of usability in the greater context of information systems and organizations.
+
+The following two theories explain the performance impacts information systems have on individuals or organizations. Both recognize the importance of usability as a characteristic of the system in determining performance outcomes. Accordingly, they postulate that good system usability will contribute to increased individual and, in consequence, organizational performance. Therefore, managers should be interested in choosing a CRM system with good usability and vendors should be interested in providing a product with good usability in order to reap the benefits of highly user-friendly software.
+
+\subsection{Information Systems Success Model}
+\label{sec:is_success}
+%add why it's relevant from the last paragraph
+The information systems success model \citep{DeLone1992,DeLone2004,DeLone2003} defines six categories for measuring the success of information systems: system quality, information quality, use, user satisfaction, individual impact, and organizational impact. A second literature review \citep{DeLone2003} led to the authors' suggestion of adding \textit{service quality} to the list of system characteristics, and merging \textit{individual impact} and \textit{organizational impact} into a single construct named \textit{net benefits}, resulting in the model shown in figure~\ref{img:is_success}.
+
+\begin{figure}[htb]
+	\centering
+	\input{is_success}
+	\caption[Updated D\&M IS Success Model]{Updated D\&M IS Success Model \citep{DeLone2003}}
+	\label{img:is_success}
+\end{figure}
+
+According to the revised model, \textit{information quality} (e.g.\ ease of understanding and completeness), \textit{system quality} (measured in metrics such as ease of use and ease of learning, usefulness, and convenience of access) and \textit{service quality} (e.g.\ reliability, responsiveness, and being up-to-date) influence \textit{user satisfaction} (e.g.\ enjoyment and overall satisfaction) and \textit{intention to use}, which is related to \textit{use} (e.g.\ amount of use and voluntariness of use), which in turn also influence each other. Use and user satisfaction also influence \textit{net benefits}, consisting of \textit{individual impact} (e.g.\ decision effectiveness, job performance), which subsequently influences \textit{organizational impact} (e.g.\ cost reductions, increased profits).
+
+Several studies investigated the significance of the various relationships among constructs in the model. \Citet{Seddon1996} confirmed that there are significant relationships between system quality and user satisfaction, and information quality and user satisfaction. This finding means that improved information quality (which contains ease of understanding of the outputs of the system) and system quality (containing ease of use, ease of learning, and convenience of access) can lead to increased user satisfaction. Usability is a component of both of these independent variables, and thus plays a role in the relationship with user satisfaction.
+
+\Citet{Teo1998} and \citet{Wixom2001} found that there is a significant relationship between system quality and individual impact, which means that a higher-quality system can lead to positive individual impact. Since usability is a component of system quality, it can be argued that using heuristics to increase a system's usability will lead to increased job performance and decision quality.
+
+In addition, \citet{Teo1998} and \citet{Wixom2001} found that there is a significant relationship between information quality and individual impact (a component of \textit{net benefits} in the revised model), which means that increased understandability and usefulness of a system's output can lead to increased decision quality and job effectiveness \citep{DeLone2003}.
+
+Overall, the model shows that usability plays an important role in information systems success, as it is a component of system quality and, to a lesser extent, of information quality and service quality. These three constructs influence user satisfaction and intention to use, which is coupled to use, and finally net benefits to the organization in which the information system is used. This network of relationships underlines the importance of good usability to ensure the success of an information system and, in continuation, the need for better tools for usability engineering.
+
+\subsection{Task-Technology Fit}
+\label{sec:ttf}
+Another popular theory in this area is the task-technology fit model \citep{Goodhue1995}, in which \textit{technologies} are defined as ``tools used by individuals in carrying out their tasks'' \citep[p.\ 1828]{Goodhue1995} and \textit{tasks} are defined as ``actions carried out by individuals in turning inputs into outputs'' \citep[p.\ 1828]{Goodhue1995}. Consequently, \textit{task-technology fit} is defined as ``the extent that technology functionality matches task requirements and individual abilities'' \citep[p.\ 1829]{Goodhue1995}. This theory is relevant, since usability is an important aspect of \textit{technology characteristics}.
+
+\begin{figure}[htb]
+	\centering
+	\input{ttf}
+	\caption[Task-technology fit and technology-to-performance chain]{Task-technology fit with technology-to-performance chain \citep{Goodhue1995a}}
+	\label{img:ttf}
+\end{figure}
+
+\Citet{Goodhue1995a} extend the task-technology fit model with the tech\-no\-logy-to-performance chain, in order to include the influence of usage in explaining an individual's job performance. Figure~\ref{img:ttf} shows the extended task-technology fit model.
+
+The combined model suggests that a good fit between technology, task, and the individual's characteristics, together with actual usage, will lead to improved job performance. In addition, different users are theorized to rate the same technology differently due to variances in their task needs and abilities. This means that when evaluating the usability of a system, it is important to factor in characteristics of the different tasks that users need to complete using a system, in order to ensure an actual increase in work performance \citep{Goodhue2006}.
+
+According to the model, users will rate a technology system better if it fits the task characteristics. Since usability is an important component of a technology's characteristics, increased usability of a technology will, subject to other factors, lead to performance improvements. If the methods and tools used for usability engineering (e.g.\ heuristic evaluations) can be advanced, a technology's characteristics and fit to the task can be improved.
+
+\section{Customer Relationship Management}
+%what is it, what are crm systems
+As alluded to previously, customer relationship management is the ``process of acquiring, retaining and growing profitable customers'' \citep[p.\ 8]{Brown2000}. In today's competitive marketplace, mass-advertising is often not an effective way to build lucrative relationships with customers, and thus customer relationship management becomes increasingly important in creating purposeful and tailored advertising strategies to reach customers \citep{McKenzie2001,Brown2000}. The ultimate goals of CRM are to ``win mind share, increase wallet share, and reduce churn'' \citep{McKenzie2001}.
+
+Many companies employ computer-based systems of some form or other in an effort to realize the potential benefits of customer relationship management and to execute marketing strategies. While some systems are rudimentary, there is a large offering of specialized software for this purpose.
+
+Most dedicated CRM systems can be grouped into one of three categories \citep{Band2010}. Enterprise CRM systems specialize in large-scale installations for companies with more than 1,000 employees, often spread across different countries. These systems are the most full-featured. Mid-market CRM systems cater to smaller companies with less than 1,000 employees and usually offer limited functionality for a cheaper price. Often, these solutions are hosted by the vendor and licensed in a software-as-a-service model. Finally, there are specialty tools, which offer a narrow band of specialized functionality, such as analytics and data management, or functionality for a specific industry such as pharmaceuticals or telecommunications \citep{Band2010}.
+
+\subsection{Business Need, Advantages, and Problems}
+%commoditization, need for tailored advertising and multiple channels Brown2000 p. 8
+The business need for this type of software is increasing and driven by a commoditization of many products and a fragmentation of the marketplace and customers. This changing business environment necessitates a detailed marketing strategy with an emphasis on tailored advertising and utilization of different communication channels \citep{Brown2000}.
+
+CRM systems support an organization in typical marketing activities by providing the functionality mentioned as follows \citep{Chaffey2011,Band2010b}.
+
+\begin{singlespace}
+	\begin{itemize}
+		\item Customer selection (identify types of customers to target, segment customers)
+			\begin{itemize}
+				\item customer business intelligence
+				\item customer data management
+			\end{itemize}
+		\item Customer acquisition (perform marketing activities to form relationships with new customers)
+			\begin{itemize}
+				\item sales force automation
+				\item revenue and pricing management
+				\item order management
+			\end{itemize}
+		\item Customer retention (perform marketing activities to maintain relationships with customers)
+			\begin{itemize}
+				\item electronic bill presentment and payment
+				\item interactive voice response
+				\item contact center infrastructure
+				\item customer service and support
+			\end{itemize}
+		\item Customer extension (increase depth or range of products a customer purchases from the company)
+			\begin{itemize}
+				\item sales force automation
+				\item customer service management
+			\end{itemize}
+	\end{itemize}
+\end{singlespace}
+
+More recently, many CRM suites have added capabilities for social media integration, support for mobile devices, and hosted software-as-a-service options. Social media integration allows CRM users to directly interact with their customers and prospects through the various social networks. Some CRM suites also allow employees within a company to network with each other and use social media-like features within the CRM system to share important information. Support for mobile devices such as smartphones and tablets is becoming increasingly important, since many salespeople want to be able to access the CRM system from their devices while on the road. Most major CRM vendors now also offer software-as-a-service solutions, which means that the vendor hosts the system and typically charges a per-use fee for access to it.
+
+%problems with CRM (Brown2000 p. 3/4), benefits p. 8/9
+There are many reasons for the adoption of CRM systems and a corresponding strategy. Costs may be reduced by employing targeted advertising models through which specific lucrative customer groups and individuals can be identified, campaigns can be tracked and assessed based on their effectiveness, and the importance of the price of a product can be reduced by providing superior customer service \citep{Brown2000}. In addition, recent research has shown that it is important to diversify marketing efforts as much as possible, since long-term customers are not necessarily more loyal than new customers, as they may still buy from a competitor who can offer better value \citep[p.\ 451]{Chaffey2011}.
+
+\Citet{Band2010} identified the top customer relationship management goals of both business-to-business (B2B) and business-to-consumer (B2C) oriented companies. The top three benefits B2B companies seek to realize through CRM systems are attracting new customers (66\%), retaining existing customers and improving loyalty (63\%), and selling more products/services to existing customers (50\%) \citep{Band2010}. The top three CRM goals of B2C companies are retaining existing customers and improving loyalty (72\%), improving the customer experience (62\%), and attracting new customers (45\%) \citep{Band2010}.
+
+Despite the compelling promises made about CRM systems, implementations of these systems are complex and therefore often troubled. Due to failed implementations, expected benefits are often not realized. Among the reasons for failing CRM implementations are a lack of shared understanding between different parts of the company, a lack of clear program scope, fragmented and fractional implementations, and a lack of a clear strategy for utilizing the CRM system \citep{Brown2000,McKenzie2001}.
+
+%\subsection{Usability Issues}
+%known issues with regard to usability, forrester wave
+Many failed CRM system implementations have been attributed to a lack of good usability and user experience, which resulted in employee user dissatisfaction with and resistance to change toward the new system. \Citet{Kemp2001} found that a lack of alignment between users' workflow and the application's design, as well as poorly designed user interfaces, lead to many CRM implementation failures. \Citet{Ebner2003} reported usability as being a frequent source of ``trouble'' in CRM implementations. Recently though, an improvement in the usability of many CRM systems has been noted, which shows that there is an interest in resolving the problem \citet{Band2010,Band2010a}.
+
+\subsection{Examples of CRM Software}
+%examples and screen shots
+\Citet{Band2010,Band2010a} identified several CRM solutions as leaders in the market for large and/or midsized companies. All of these leading solutions are either fully web-based or have at least an alternative web-based user interface. Table~\ref{tab:crm_leaders} gives an overview of these solutions. \Citet{Band2010,Band2010a} also assigned a rating for each product's usability on a scale of one through five, but it is unclear how these ratings were developed and on what they are based.
+
+\begin{table}[hbtp]
+	\vspace{0.5cm}
+	\centering
+	\caption[Leaders in the CRM market]{Leaders in the CRM market as identified by \citet{Band2010} and \citet{Band2010a}}
+	\label{tab:crm_leaders}
+	\newcolumntype{C}{>{\centering\arraybackslash}X} %
+	\begin{tabularx}{\textwidth}{lCCc} \toprule
+		\textbf{Solution} & \textbf{Large Companies} & \textbf{Midsize Companies} & \textbf{Usability} \\ \midrule
+		Microsoft Dynamics CRM  		& \ding{51}	& \ding{51}	& 4.93 \\
+		salesforce.com 				& \ding{51}	& \ding{51}	& 4.87 \\
+		Oracle CRM On Demand 		& \ding{51}	& \ding{51}	& 4.54 \\
+		SAP CRM 						& \ding{51}	& \ding{51}	& 4.37 \\
+		Oracle Siebel CRM			& \ding{51}	& 			& 4.33 \\
+		SAP Business All-in-One		&			& \ding{51}	& 4.22 \\
+		CDC Software Pivotal    		& \ding{51}	& \ding{51}	& 4.13 \\
+		RightNow CX 					& \ding{51}	& \ding{51}	& 3.94 \\
+		SugarCRM Sugar Professional	&			& \ding{51}	& 3.90 \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+While these industry rankings and ratings are a useful tool to identify strong players and innovators, market positions can change quickly, as was recently exemplified when IBM, formerly Oracle Siebel CRM's largest customer, switched to SugarCRM, a relative new-comer and outsider due to its open source approach \citep{Jones2012}.
+
+Section~\ref{sec:materials}\ref{sec:selected_systems} contains an overview of the three CRM systems selected as examples for the study.
+
+\section{Usability Heuristics}
+\label{sec:heuristics_review}
+There are a number of different usability engineering techniques, some more expensive and complex than others. Traditional user testing, for example, calls for the inclusion of a representative sample of end users and expensive equipment to capture the user's action. Discount usability engineering techniques \citep{Nielsen1993} on the other hand are cheap, quick, and easy to perform, thus more likely to be used. Naturally, there are trade-offs that come with these benefits. First and foremost, some aspects of usability and problems may be missed when discount techniques are used. These techniques include user observation, scenarios, thinking aloud, and heuristic evaluations \citep{Nielsen1993}. It is recommended to combine these techniques to identify the largest possible number of usability problems.
+
+User observation is an important and basic method for usability engineering in which users are asked to perform everyday tasks using an interface in their normal work environment. The researcher observes the user without interfering and takes notes about any problems the user encounters \citep{Nielsen1993}.
+
+Scenarios use extremely simplified user interface prototypes for predefined tasks to allow users to interact with the design for a system before it is fully developed and identify usability problems. This method is very simple and allows for the review of prototypes at every iteration \citep{Nielsen1993}.
+
+Thinking aloud is a technique in which one user at a time is asked to complete a set of tasks while ``thinking aloud'' and narrating their thought process. This method allows the researcher to gain insight into the reasoning behind a user's actions and clearly identify problematic user interface elements \citep{Nielsen1993}. It is also possible to record the user's actions on the screen as well as their commentary for further analysis.
+
+Heuristic evaluations are a way to identify usability problems without the involvement of users. With this technique, usability experts are asked to evaluate a system based on a list of heuristics to identify usability problems that violate them \citep{Nielsen1993}. Usability problems are also often rated with regard to their severity. Many sets of heuristics have been developed for various purposes and at various levels of detail. A selection of these is presented in subsection~\ref{sec:heuristics_in_literature} below.
+
+\subsection{Heuristics in the Literature}
+\label{sec:heuristics_in_literature}
+After an extensive literature review and examination of the findings, two classification schemes for usability heuristics emerged. First, heuristics can be classified by specificity, second they can be classified by granularity.
+
+In terms of specificity, there are two broad groups---heuristics that were developed for any kind of user interface or all computer user interfaces, and heuristics focused on a particular application area such as e-commerce. Typically, the more general heuristics provide quite specific instructions and low-level guidelines for user interface design (e.g.\ icon design and layout of data entry fields). The specialized heuristics are higher-level and more concerned with workflows, task support, and industry-specific functionality (e.g.\ ability to personalize screens).
+
+With regard to granularity, some researchers have developed specific checklists suitable for evaluating a user interface, while others only provide a set of general principles. Some research falls in between, offering intermediate granularity. As will be explained in section~\ref{sec:research_design}, the level of detail of the heuristics is relevant due to the nature of the empirical study of this thesis. Table \ref{tab:heuristics_lr} gives an overview over the heuristics research that is reviewed in this study.
+
+\begin{table}[hbtp]
+	\vspace{0.5cm}
+	\centering
+	\caption[Heuristics research reviewed in this study]{Heuristics research reviewed in this study; heuristics marked with a $\ast$ were used as materials for the empirical study}
+	\begin{tabular}{llll} \toprule
+		\textbf{Study} 					& 	& \textbf{Application Area}  & \textbf{Granularity} \\ \midrule
+		\citet{Molich1990} etc. &	$\ast$ & Any kind of user interface & Principles 	\\
+		\citet{Norman2002} 			& 	& Any kind of user interface & Principles 	\\
+		\citet{Perlman1997}			&	& Computers									 & Principles 	\\
+		\citet{Weiss1994} 			& 	& Computers 								 & Checklist		\\
+		\citet{Pierotti1995} 		& 	& Computers 								 & Checklist		\\
+		\citet{Leavitt2006} 		& 	& Web 											 & Checklist		\\
+		%Specific heuristics
+		\citet{Zhang2011}				& 	& Electronic health records	 & Principles		\\
+		\citet{Petre2006} 			& 	& E-commerce 								 & Intermediate	\\
+		\citet{Ardito2006}			& $\ast$	& E-learning								 & Intermediate	\\
+		\citet{Oztekin2010}			& 	& E-learning								 & Intermediate	\\
+		\citet{Singh2009}				& $\ast$	& ERP systems								 & Intermediate	\\
+		\bottomrule
+	\end{tabular}
+	\label{tab:heuristics_lr}
+\end{table}
+
+\subsubsection{Classification by Granularity}
+Overall, there are three distinct levels of granularity that heuristics fall into.
+
+\paragraph{Principles} These heuristics are broadly-formulated and apply to a large number of different user interfaces and application areas. There are usually 15 or less heuristics in a set and each heuristic consists of a name and a short description. Due to the general nature of these heuristics, usability expertise is needed in order to apply them correctly and identify usability problems. They are sometimes used as the basis for developing more detailed heuristics or as categories for detailed heuristics. An example of a heuristic in this category would be ``\textit{Visibility of system status}: The system should always keep the users informed about what is going on, through appropriate feedback within reasonable time'' \citep{Nielsen1994a}.
+
+\paragraph{Intermediate} Heuristics in this category generally apply to a specific type of user interface or application area (e.g.\ e-commerce applications) and focus on special characteristics of the application area. Since these heuristics are more detailed, there are typically between 30 and 60 items in a set. They are more specific than general principles, but less specific than checklists. An example for a heuristic in this category is ``Does the course offer multiple opportunities for interaction and communication among students, to instructor, and to content?'' \citep{Oztekin2010}.
+
+\paragraph{Checklist} These heuristics are very detailed and low-level. They are generally used for broad application areas such as computer user interfaces in general or web user interfaces. These heuristics are most suited for a step-by-step evaluation of a user interface and often provide a rating scale for that purpose. Generally, there are more than 100 items in a set of heuristics of this type. Due to the fact that they are more detailed and specific than the other types of heuristics, they can also be used by non-usability experts to evaluate a system, but they may often seem intimidating in light of the sheer number of heuristics in a set. An example would be ``When using data entry fields, specify the desired measurement units with the field labels rather than requiring users to enter them'' \citep{Leavitt2006}.
+
+\subsubsection{Classification by Specificity}
+There are two levels of specificity with regard to application areas that heuristics can be categorized into. First, there are heuristics which are applicable to a broad spectrum of user interfaces (e.g.\ computer user interfaces in general). Second, there are heuristics which have been developed with a specific class of applications in mind (e.g.\ e-learning systems).
+
+\paragraph{General Heuristics}
+The heuristics in this section were developed for broad categories of user interfaces such as computer interfaces in general or web-based interfaces. They typically fall either into the category of principles or checklists.
+
+%\subsection{\citeauthor{Molich1990}}
+One of the earliest and best-established sets of heuristics was originally developed by \citet{Molich1990} and later refined by \citet{Nielsen1994,Nielsen1994a}. The set consists of ten general, broadly-formulated usability principles, which are applicable to most graphical user interfaces. The authors do not provide specific checklists for the evaluation of systems, but short definitions of the heuristics. Other researchers \citep[e.g.][]{Perlman1997,Lavery1996} have developed alternative descriptions and general evaluation questions for these heuristics.
+
+%\subsection{\citeauthor{Norman2002}}
+\Citet[p.\ 52]{Norman2002} identified four ``principles of good design'', \textit{visibility} [of system status], \textit{a good conceptual model}, \textit{good mappings}, and \textit{feedback}. These heuristics are general in nature and apply to not only computer user interfaces, but any kind of ``thing'' a person might interact with, be it physical or virtual. As such, these concepts are very broadly-formulated and while the author does explain them in detail, there are no concrete guidelines for a heuristic evaluation.
+
+%\subsection{\citeauthor{Perlman1997}}
+\Citet{Perlman1997} based his list of thirteen general principles on the heuristics developed by \citet{Nielsen1993} and \citet{Norman2002}. \Citeauthor{Perlman1997} took all ten of \citeauthor{Nielsen1993}'s heuristics and rephrased some of them. They were supplemented with two heuristics from \citet{Norman2002}. \Citeauthor{Perlman1997} also added two new heuristics (\textit{provide maps and a trail} and \textit{show the user what is (not) possible}). In addition, \citeauthor{Perlman1997} added short explanations for each heuristic, which differ from the existing explanations provided by the original authors of the respective heuristics.
+
+%\subsection{\citeauthor{Weiss1994}}
+\Citet{Weiss1994} developed sets of heuristics and evaluation checklists for four aspects of user interfaces (presentation, conversation, navigation, and explanation). The checklists are focused on traditional desktop-based computer systems (i.e.\ not web-based) and address both hardware and software usability. Due to the time period during which they were developed, the heuristics are mostly based on early ``green screen'' and terminal interfaces. There is a total of 285 guidelines in 20 checklists grouped into four categories. In addition to the checklists themselves, instructions for evaluating systems and selecting relevant user interface components to evaluate are provided. During an evaluation, items on the checklists are rated as fulfilled, not fulfilled, or not available. Sets of heuristics can be mixed and matched based on the specific deficiencies of the system that is to be evaluated. \Citet{Weiss1994} also provides a survey instrument for measuring user satisfaction.
+
+%\subsection{\citeauthor{Pierotti1995}}
+\Citet{Pierotti1995} created a checklist based on the items developed by \citet{Weiss1994}. The original items remained unchanged, but were regrouped into the categories identified by \citet{Nielsen1994a}. \Citeauthor{Pierotti1995} also added three new categories (\textit{skills}, \textit{pleasurable and respectful interaction with the user}, and \textit{privacy}) to accommodate all of \citeauthor{Weiss1994}'s heuristics. In addition, two new items were added to the privacy category.
+
+%\subsection{\citeauthor{Leavitt2006}}
+\Citet{Leavitt2006} provide an extensive list of 209 usability guidelines specific to web sites and web applications. The guidelines are categorized into 17 groups. The list is based on a review of the relevant literature and each item in it is rated in terms of strength of evidence and relative importance. While focused on web-based interfaces, the heuristics are still quite general in nature and not specific to the characteristics of business software.
+
+\paragraph{Specific Heuristics}
+The research in this group addresses a specific and relatively narrow field of applications or users. The heuristics are generally on a higher, less detailed level than those discussed in the previous section. These heuristics typically are of intermediate granularity, thus being neither very specific nor general.
+
+Numerous studies have investigated heuristics for specific types of applications and systems. \Citet{Petre2006}, for example, developed a set of heuristics for e-commerce based on a list of obstacles encountered by online shoppers as they used different online stores.
+
+E-learning has also been a popular area for the development of heuristics. \Citet{Ardito2006} developed 64 heuristics in this area. They are grouped into two broad groups: platform guidelines and module guidelines. Within these groups, there are four categories of heuristics. \Citet{Oztekin2010} developed a total of 36 heuristics in twelve categories loosely based on \citeauthor{Nielsen1994a}'s heuristics. In addition, \citet{Freire2012} provide a review of recent research on e-learning usability heuristics.
+
+\citet{Zhang2011} developed heuristics for the area of electronic health records. These were based on the heuristics developed by \citet{Nielsen1993} as well as the ``eight golden rules'' by \citet{Shneiderman1998}. There are a total of fourteen heuristics, which are very broadly-formulated. Finally, enterprise resource planning (ERP) systems were the focus of the research by \citet{Singh2009}.
+
+Usability heuristics have also been developed with specific types of users in mind. These include elderly users \citep[e.g.][]{AARP2004,Redish2004} and visually impaired users \citep[e.g.][]{Harper2003}.
+
+\section{What We Know}
+This section contained a review of the literature on theoretical frameworks relating to usability engineering, CRM systems, and usability heuristics. There has not been much research with regard to theoretical frameworks for usability engineering or heuristic evaluations in particular. There do exist frameworks which contain usability as a part of some of their constructs and two popular examples of these were presented.
+
+With regard to CRM systems, we know what they are used for in organizations, who uses them, which solutions are widely used, and that implementations of CRM systems are often problematic. We do not know, which usability problems are commonly found in CRM systems and there is no set of heuristics specific to them.
+
+Finally, there is a wealth of usability heuristics, which can be categorized according to two schemes. First, there is a spectrum of heuristics, with general heuristics on one side and domain-specific heuristics on the other. Second, there are three distinct levels of granularity, principles, checklists, and intermediate heuristics. Previous research has shown that both general and domain-specific heuristics are necessary to adequately evaluate a software system for usability problems. Yet, there are no heuristics specific to web-based CRM systems. There is also no framework for the development of specific heuristics.

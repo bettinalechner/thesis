@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+	\begin{axis} [
+		xlabel=Applicability,
+		ylabel=N,
+		grid=major,
+		legend pos=north west,
+		legend cell align=left,
+		ybar,
+		ymin=0,
+		ymax=18
+	]
+		\addplot[fill=black!30] coordinates {
+			(1.0, 0) (1.2, 0) (1.4, 2) (1.6, 2) (1.8, 4) (2.0, 6) (2.2, 4) (2.4, 2) (2.6, 1) (2.8, 7) (3.0, 2) (3.2, 3) (3.4, 4) (3.6, 7) (3.8,16) (4.0,13) (4.2, 4) (4.4, 4) (4.6, 3) (4.8, 0) (5.0, 0)
+		};
+		\addlegendentry{Count}
+		\addlegendimage{sharp plot,mark=*,very thick}
+		\addlegendentry{Cumulative Count}
+	\end{axis}
+	
+	\begin{axis} [
+		ylabel=Cumulative N,
+		axis y line=right,
+		axis x line=none,
+		ybar,
+		ymin=0,
+		ymax=90
+	]
+		\addplot[sharp plot,mark=*,very thick] coordinates {
+			(1.0,0) (1.2,0) (1.4,2) (1.6,4) (1.8,8) (2.0,14) (2.2,18) (2.4,20) (2.6,21) (2.8,28) (3.0,30) (3.2,33) (3.4,37) (3.6,44) (3.8,60) (4.0,73) (4.2,77) (4.4,81) (4.6,84) (4.8,84) (5.0,84)
+		};
+	\end{axis}
+\end{tikzpicture}

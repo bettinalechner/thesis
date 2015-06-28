@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+[ node distance=10mm and 10mm,
+		activity/.style={regular polygon,regular polygon sides=6,draw,fill=black!20,text width=1.3cm,text centered},
+		document/.style={rectangle,draw,text width=3cm,minimum height=3em,text centered},
+		arrowOut/.style={->,shorten >=1pt,>=stealth',semithick},
+		arrowIn/.style={<-,shorten <=1pt,>=stealth',semithick}]
+			
+	\node[document] (materials) {Background materials};
+	\node[activity] (voting) [below=of materials] {Rating};
+	\node[activity] (brainstorming) [right=of voting] {Brain\-storm};
+	\node[activity] (discussion) [right=of brainstorming] {Discus\-sion};
+	\node[document] (final list) [below=of discussion] {Usability experts' heuristics};
+	
+	\draw[arrowOut] (materials) -- (voting);
+	\draw[arrowOut] (voting) -- (brainstorming);
+	\draw[arrowOut] (brainstorming) -- (discussion);
+	\draw[arrowOut] (discussion) -- (final list);
+\end{tikzpicture}

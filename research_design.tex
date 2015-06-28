@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+	[ node distance=10mm and 0mm,
+		activity/.style={regular polygon,regular polygon sides=6,draw,fill=black!20,text width=1.4cm,text centered},
+		document/.style={rectangle,draw,text width=3cm,minimum height=3em,text centered},
+		arrowOut/.style={->,shorten >=1pt,>=stealth',semithick},
+		arrowIn/.style={<-,shorten <=1pt,>=stealth',semithick}]
+			
+	\node[document] (materials) {Materials about CRM systems};
+	\node[activity] (literature) [above right=of materials] {Lit\-er\-a\-ture Review};
+	\node[document] (existing heuristics) [below right=of literature] {Existing Heuristics};
+	\node[activity] (group one) [below right=of materials] {Experts Phase};
+	\node[document] (expert heuristics) [below=of group one] {Experts' Heuristics};
+	\node[activity] (group two) [below=of expert heuristics] {Users Phase};
+	\node[document] (user heuristics) [below=of group two] {CRM Users' Heuristics};
+	\node[activity] (analysis) [below=of user heuristics] {Final Analysis};
+	
+	\draw[arrowOut] (literature) -- (materials);
+	\draw[arrowOut] (literature) -- (existing heuristics);
+	\draw[arrowOut] (materials) -- (group one);
+	\draw[arrowOut] (existing heuristics) -- (group one);
+	\draw[arrowOut] (existing heuristics) |- (analysis);
+	\draw[arrowOut] (group one) -- (expert heuristics);
+	\draw[arrowOut] (expert heuristics) -- (group two);
+	\draw[arrowOut] (expert heuristics) -| (0,-13.77) -- (analysis);
+	\draw[arrowOut] (group two) -- (user heuristics);
+	\draw[arrowOut] (user heuristics) -- (analysis);
+\end{tikzpicture}

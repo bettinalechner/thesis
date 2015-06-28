@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+	\begin{axis} [
+		height=6cm,
+		xlabel=N,
+		grid=major,
+		legend pos=north east,
+		legend cell align=left,
+		xbar stacked,
+		xmin=0,
+		xmax=35,
+		y dir=reverse,
+		symbolic y coords={Ardito et al., Nielsen, Singh and Wesson, New},
+	]
+		\addplot[fill=black!30,xbar legend] coordinates {
+			(15,Ardito et al.) (10,Nielsen) (29,Singh and Wesson) (5,New)
+		};
+		\addlegendentry{Original}
+		
+		\addplot[fill=black,xbar legend] coordinates {
+			(6,Ardito et al.) (0,Nielsen) (3,Singh and Wesson) (0,New)
+		};
+		\addlegendentry{Reworded}
+	\end{axis}
+\end{tikzpicture}

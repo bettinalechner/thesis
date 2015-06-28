@@ -1,0 +1,65 @@
+\chapter{Introduction}
+\label{chap:intro}
+%Intro: web applications becoming more prevalent, used in business setting in place of traditional, desktop-based applications
+%CRM systems: one class of business applications that are moving to the web
+	%Explain what CRM is, what CRM system do and why they are important
+	%Usability issues with CRM systems well-documented
+%Ways to improve usability: user testing, metrics (distance/size, usage), heuristic evaluations
+	%Explain heuristics: definitions, pros and cons
+	%Many different heuristics, some general, some specific, some old, some new
+	%Need for specific heuristics to discover all problems
+
+With the emergence of advanced software development technologies, web sites have become increasingly dynamic and provide greater functionality. It is now possible to create sophisticated applications for the web, which are close, if not equal, to traditional desktop applications in terms of complexity and functionality.
+
+Current research shows that web applications are also increasingly moving into the workplace, replacing previously desktop-based business applications such as enterprise resource planning systems, customer relationship management systems (e.g.\ Microsoft Dynamics CRM and Oracle CRM On Demand), and customizable information storage and retrieval systems (e.g.\ force.com and ZOHO tools) \citep{Band2010}. In 2011 alone, the global market for web-based Software-as-a-Service (SaaS) products was worth \$12.1 and grew 20.7\% compared to the previous year \citep{Symplified2011}. These web-based applications offer a number of features, putting them on par with desktop applications, sometimes even exceeding the functionalities of their traditional counterparts.
+
+One class of business software that has seen an increased focus on web-based implementations are customer relationship management (CRM) systems. \Citet{Band2010}, for example, found that CRM technology buyers now consider web-based solutions their first choice, before even considering a traditional solution. CRM systems are the foundations for the customer relationship management strategy within a business, which aims to create and maintain lasting, lucrative relationships with customers \citep{Ling2001}. Modern customer relationship management addresses challenges such as the need for market segmentation and targeted advertising \citep{Brown2000}.
+
+CRM systems are ``information systems aimed at enabling organisations to realise a customer focus'' \citep[p.\ 592]{Bull2003}. CRM systems are used to execute marketing strategies and offer a number of benefits over traditional mass-media marketing. These benefits include reduced costs, increased traceability of advertising campaign effectiveness, easier identification of high-value and low-value customers, as well as a way to target specific customer segments \citep[p.\ 8]{Brown2000}.
+
+Traditionally, these CRM applications were desktop-based and installed on client computers. Recently though, many of them have become available as web-based versions which run in a web browser and don't require any additional software to be installed. The applications are used to increase a business's productivity and are integrated in employees' work flows and processes. Usage is often mandatory and dictated by upper-level management.
+
+As the complexity and functionality of these web-based applications increase, usability engineering also becomes more important. \textit{Usability} is a measurable characteristic of user interfaces that shows how easy to learn and use an interface is \citep{Mayhew1999}. Users are impatient and often give up quickly when they experience problems~\citep{Najjar2011,Nielsen2000}. Therefore, good usability can lead to decreased frustration and increased employee satisfaction, even in mandatory usage situations \citep{Hsiehforthcoming}. In addition, it is important for CRM system vendors to provide a good user experience in order to attract and retain customers, since customers generally have a variety of providers to choose from and can decide whether they like one before they commit to purchasing it~\citep{Nielsen2000,Hasan2009}.
+
+There are many different ways to improve usability. Some methods include the observation of users, other methods are based on an assessment of certain properties of a system, and a third group uses usability experts to evaluate a system based on a set of defined usability heuristics.
+
+Heuristic evaluations are a way to perform a usability analysis without the necessity of involving actual users. Rather, experts in the field of human-computer interaction and usability evaluate a system's user interface based on a set of defined principles (i.e.\ heuristics). This method is relatively cheap and allows for the swift identification of major and minor usability problems, without having to locate and recruit users \citep{Nielsen1993}. Previous research has shown that heuristic evaluations are a suitable technique for assessing web applications~\citep{Sharp2007,Nielsen2000,Ssemugabi2010}.
+
+\section{Research Problem}
+There are a number of established and tested usability heuristics which have been developed for desktop applications or software in general \citep[e.g.][see section \ref{sec:heuristics_review}]{Molich1990,Nielsen1994a,Pierotti1995,Leavitt2006}.
+
+Web applications, however, have a number of limitations and likewise advantages that differentiate them from traditional desktop applications. Limitations include differences in the implementation of web browsers resulting in differently rendered interfaces, a lack of platform- and browser-independent keyboard short-cuts, and varying network speeds affecting load time and performance. Examples of benefits are the ability to collaborate with other users in real-time, as well as an easy method of managing updates and distributing new functionality. %need citations
+
+While there is some research investigating usability heuristics for web sites and web applications \citep[e.g.][]{DeJong2000,Krug2006,Leavitt2006,Najjar2011}, these heuristics are of a general nature and do not focus on CRM systems. \Citet{Rusu2011}, on the other hand, recommend that general heuristics be complemented by heuristics specific to the domain they are to be applied to, since general heuristics are likely to miss domain-specific problems. Other researchers have also come to this conclusion and developed specific usability heuristics for specific applications based on general heuristics \citep[e.g.][]{Zhang2011}. While there are heuristics and guidelines available for web sites, they are not geared toward web-based CRM systems and their characteristics, which will be explained later on.
+
+In addition, usability heuristics can become obsolete over time as user interfaces change and new interface components emerge and others disappear. With the evolution of user interface paradigms from command-line interfaces over monochrome, text-based terminals to window-based graphical user interfaces, the interface components used in each vary considerably \citep[p.\ 220ff]{Sharp2007}. Therefore, usability heuristics developed for a specific interface type or interface element may become obsolete when the corresponding element is superseded by a newer technology.
+
+In consequence, this thesis will be guided by the following research questions:
+
+\RQ{}
+
+\section{Importance}
+The value of performing a heuristic evaluation lies in being able to quickly and cheaply identify major and minor usability problems. Rather than having to recruit users for a usability test, usability experts can evaluate a system by means of a set of heuristics to identify usability issues and improve the user interface.
+
+While the benefits of good and usable interfaces are largely intangible and unquantifiable, research has shown that reducing the number of usability problems improves employee productivity \citep[p.\ 17]{Marcus2005} and job satisfaction \citep[p.\ 19]{Preece1998}, reduces the need for user support, and decreases the need for user training \citep{Karat1990,Marcus2005}.
+
+Although it has been argued that good usability is not important in mandatory usage situations like those common for business software, \citet{Hsiehforthcoming} show that user satisfaction with a system has a positive impact on employee service quality and, in turn, on customer satisfaction.
+
+Since usability issues of CRM software are evident and well-covered in academia and industry \citep[e.g.][]{Band2008, Fjermestad2003a}, it is important to improve on usability in order to avoid the pitfalls described by \citet{Hsiehforthcoming}. One way to achieve better usability is to perform evaluations of the software based on a set of relevant and applicable heuristics.
+
+While there are general heuristics to increase usability and user satisfaction for desktop and web applications, they are not specific to web-based business applications and their characteristics. This means that when they are used in an evaluation of such a system, important domain-specific usability issues may be missed \citep{Rusu2011}.
+
+\subsection{Characteristics of Web-Based Business Software}
+Some of the characteristics that differentiate web-based business software from general web applications are a greater focus on reliable data storage and retrieval, a large amount of interaction between the user and the system, as well as a need for efficient and fast expert navigation.
+
+These web-based business applications are used within organizations on a daily basis and are a critical part of the business workflow. They support core business activities such as customer relationship management or supply chain management. As such, they are integral to the health of the business. In order to fulfill their functions, they often are integrated with other applications internal and external to an organization.
+
+There is a lack of research investigating heuristics specific to the domain of web-based business software and its characteristics. Due to this lack of heuristics, important usability issues may be missed when these systems are evaluated, leading to less-than-optimal user interfaces and thus decreased user satisfaction.
+
+\section{Contributions}
+The results of this thesis add to the existing body of usability heuristics and provide a set of heuristics tailored to the expanding class of web-based business software. This thesis closes a gap in usability heuristics for web-based business software.
+
+For practitioners, the benefits are two-fold. On one hand, a better understanding of the heuristics relevant to web-based business software will allow for the selection of systems with greater usability, which can lead to benefits such as increased productivity and customer satisfaction within the organization. On the other hand, it will allow vendors to evaluate their own products and improve them in order to gain a competitive advantage through improved usability.
+
+\section{Organization of this Thesis}
+This thesis is divided into five chapters. Chapter~\ref{chap:litrev} discusses existing research about the usability heuristics, provides background information on customer relationship management, and presents existing theories related to usability and its importance. The research method followed in this thesis is described in chapter~\ref{chap:method}. This chapter includes descriptions of the research question and research design, as well as participant selection. Chapter~\ref{chap:findings} presents the findings of the study. The thesis is concluded by chapter~\ref{chap:discussion}, which discusses and analyzes the findings, and describes the limitations of the study as well as future research directions.

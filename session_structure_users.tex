@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+[ node distance=10mm and 10mm,
+		activity/.style={regular polygon,regular polygon sides=6,draw,fill=black!20,text width=1.3cm,text centered},
+		document/.style={rectangle,draw,text width=3cm,minimum height=3em,text centered},
+		arrowOut/.style={->,shorten >=1pt,>=stealth',semithick},
+		arrowIn/.style={<-,shorten <=1pt,>=stealth',semithick}]
+	
+	\node[document] (first list) {Usability experts' heuristics};	
+	\node[activity] (second rating) [below=of first list] {Rating};
+	\node[activity] (second discussion) [right=of second rating] {Discus\-sion};
+	\node[document] (second heuristics) [right=of second discussion] {CRM users' heuristics};
+	
+	\draw[arrowOut] (first list) -- (second rating);
+	\draw[arrowOut] (second rating) -- (second discussion);
+	\draw[arrowOut] (second discussion) -- (second heuristics);
+\end{tikzpicture}

@@ -1,0 +1,191 @@
+\documentclass[letterpaper,12pt,oneside,final]{book}
+
+\setlength{\parindent}{6mm} %Paragraph Indent
+\usepackage[top=1in, bottom=1in, left=1.5in, right=1in]{geometry} %Page Margins
+\usepackage{setspace}
+\doublespacing
+\usepackage{graphicx} %advanced image options
+\usepackage{color} %using colors
+\usepackage{tikz} %create graphics
+\usetikzlibrary{arrows,positioning,fit,shapes,decorations,patterns} %better arrow tips, relative positioning, automatic fitting, shapes and snakes for better shapes
+\usepackage{pgfplots}
+\pgfplotsset{width=5in}
+\usepackage[normalem]{ulem} %strike through text
+\usepackage{amsmath} %advanced math symbols
+\usepackage{calc} %to calculate best dimensions for images:
+\newlength{\imgwidth}
+\newlength{\imgheight}
+\newlength{\finalwidth}
+\newlength{\finalheight}
+\newlength{\imgtextheight}
+\newcommand\scalegraphics[1]{%
+	\settowidth{\imgwidth}{\includegraphics{#1}}%
+	\settoheight{\imgheight}{\includegraphics{#1}}%
+	\ifnum\imgwidth>\imgheight \def\imgangle{90} \else \def\imgangle{0} \fi%
+	\setlength{\imgtextheight}{0.74\textheight}%
+	\setlength{\finalwidth}{\minof{\imgwidth}{\textwidth}}%
+	\setlength{\finalheight}{\minof{\imgheight}{\imgtextheight}}%
+	\ifnum\finalwidth=\imgwidth \def\imgangle{0} \fi%
+	\includegraphics[angle=\imgangle, width=\finalwidth, height=\finalheight, keepaspectratio]{#1}%
+}
+\newcommand\RQ{\begin{enumerate} \renewcommand{\theenumi}{\alph{enumi}} \item What usability heuristics are relevant to web-based CRM systems? \item Which heuristics are irrelevant? \item Are there new heuristics that need to be added? \end{enumerate}}
+\newcommand{\thesisTitle}{\uppercase{Identifying New and Obsolete Usability Heuristics for Web-Based Business Software}}
+\newcommand{\downloadDate}{May 16, 2012}
+%\newcommand\added[1]{\textcolor{red}{#1}}
+%\newcommand\deleted[1]{\sout{\textcolor{red}{#1}}}
+\graphicspath{{./img/other/}} %look for images in the img/other directory
+\graphicspath{{./img/dynamics/}} %look for images in the img/dynamics directory
+\graphicspath{{./img/force/}} %look for images in the img/force directory
+\usepackage{placeins} %Defined float barriers
+\renewcommand{\familydefault}{\rmdefault} %Serif Font
+%\usepackage{times} %Times font
+\usepackage{tabularx}
+\usepackage{booktabs} %Nice tables
+\usepackage{longtable} %Tables across pages, required by tabu
+\usepackage{tabu} %Better table control
+\usepackage{multirow} %Center multi-row cells vertically
+\usepackage{array} %More table stuff
+\usepackage{boxedminipage} %Minipages with lines around them
+\usepackage{appendix} %Extra support for fancy appendices
+\usepackage{lscape} %Landscape pages
+\usepackage{pifont} %Extra special characters
+\setcounter{secnumdepth}{3} %Numbering depth of subsections
+\renewcommand{\thesubsubsection}{.\arabic{subsubsection}} %number subsubsections like .1
+\setcounter{tocdepth}{1} %Depth of TOC
+\usepackage{fancyhdr} %customize plain page style
+\setlength{\headheight}{15pt}
+\fancypagestyle{plain}{%
+    \fancyhf{} % clear all header and footer fields
+    \fancyhead[R]{\thepage} % except the right top corner
+    \renewcommand{\headrulewidth}{0pt} % remove line between header and main text
+}
+\pagestyle{plain}
+
+\makeatletter %wider box for TOC page numbers
+\renewcommand{\@pnumwidth}{2em} %wider box for TOC page numbers
+\renewcommand{\@tocrmarg}{3em} %wider box for TOC page numbers
+\makeatother %wider box for TOC page numbers
+
+\usepackage[sort]{natbib} %Fancy referencing, sorted citations
+\bibpunct{(}{)}{;}{a}{,}{,} %Punctuation for inline referencing
+\usepackage[hyphens]{url}
+\usepackage[hidelinks,pdfauthor={Bettina Lechner},pdftitle={Identifying New and Obsolete Usability Heuristics for Web-Based Business Software}]{hyperref}
+\usepackage[final]{pdfpages} %add PDF pages to document
+\usepackage[justification=centering]{caption} %better control how captions are displayed
+\usepackage{tocloft} %Needed for adding dots to table of contents
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} %Adding dots to table of contents chapter
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Adding dots to table of contents section
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		\vspace*{.5in}
+		\textbf{\thesisTitle{}}
+		
+		\vspace*{.25in}
+		
+		A Thesis \\ Presented to the \\ Department of Information Systems and Quantitative Analysis \\ and the \\ Faculty of the Graduate College \\ University of Nebraska \\ \begin{singlespace}In Partial Fulfillment \\ of the Requirements for the Degree \end{singlespace} Master of Science in Management Information Systems \\ University of Nebraska at Omaha \\ by \\ Bettina Lechner \\ August 2012
+		
+		\vspace*{1in}
+		
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{c}
+				Supervisory Committee: \\ \midrule\addlinespace[6pt]
+				Ann Fruhling, Ph.D. \\ \addlinespace[8pt]
+				Stacie Petter, Ph.D. \\ \addlinespace[8pt]
+				Harvey Siy, Ph.D. \\
+			\end{tabular}
+		\end{table}
+	\end{center}
+\end{titlepage}
+
+\frontmatter
+\pagenumbering{gobble}
+\newpage
+\thispagestyle{empty}
+%Abstracts are limited to 350 words including the title. Note, however, that thesis and project abstracts published by ProQuest will be truncated to 150 words.
+
+\begin{center}
+	\vspace*{.5in}
+	
+	\thesisTitle{}
+	
+	\vspace*{.25in}
+	
+	Bettina Lechner, M.S.
+	
+	University of Nebraska, 2012
+	
+	Advisor: Ann Fruhling, Ph.D.
+	
+	\vspace*{.25in}
+\end{center}
+
+With the emergence of advanced software development technologies, web sites have become increasingly dynamic and provide greater functionality. One class of business software that has seen an increased focus on web-based implementations are customer relationship management (CRM) systems. As the complexity and functionality of these web-based applications increase, usability engineering also becomes more important. Heuristic evaluations are a way to perform a usability analysis without the necessity of involving actual users. Rather, experts in the field of human-computer interaction and usability evaluate a system's user interface based on a set of defined principles (i.e. heuristics).
+
+While there is some research investigating usability heuristics for web sites and web applications, these heuristics are of a general nature and do not focus on CRM systems. On the other hand, it has been recommend that general heuristics be complemented by heuristics specific to the domain they are to be applied to, since general heuristics are likely to miss domain-specific problems. This thesis investigates the relevance of existing heuristics to today's web-based CRM systems, as well as the potential need for new, specific heuristics.
+
+To answer this question, a two-phased, mixed approach combining qualitative and quantitative methods was employed. First, usability experts were asked to review existing heuristics. Second, users of CRM systems evaluated this new list for validation.
+
+The results show that there is a need for domain-specific heuristics for web-based CRM systems. In addition, it was shown that general heuristics and heuristics developed for similar classes of applications are rated as more applicable than heuristics developed for very different classes of applications.
+
+\newpage
+\pagenumbering{roman}
+
+\chapter*{Acknowledgements}
+First and foremost, I want to thank my advisor Dr.\ Ann Fruhling for her continued support and belief in me. She has been invaluable in shaping this thesis and guiding me along the way. I would also like to thank Dr.\ Stacie Petter and Dr.\ Harvey Siy for being on my thesis committee and giving me great advice and helping me see things I wouldn't have without them.
+
+I would like to thank the people who participated in my study. Without them, this thesis would not have been possible and I appreciate their willingness to share their opinions and expertise.
+
+Nick Spintig deserves gratitude for supporting me and believing in me. He also provided ideas and comments for this thesis and felt with me throughout the process of creating it.
+
+Many thanks go out to my parents, Cornelia and Josef Lechner, who have always supported me in all my goals, even after I moved to the other end of the world.
+
+\textit{Vielen Dank auch an meine Eltern, Cornelia und Josef Lechner, die mich immer in all meinen Zielen unterst\"utzt haben, selbst als ich ans andere Ende der Welt gezogen bin.}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoffigures
+
+\newpage
+\listoftables
+
+\mainmatter
+
+\pagenumbering{arabic}
+
+\input{intro}
+
+\input{literature}
+
+\input{method}
+
+\input{findings}
+
+\input{discussion}
+
+\begin{singlespace}
+	\bibliographystyle{apalike}
+	\bibliography{thesisbib}
+\end{singlespace}
+
+\appendix
+\input{app_screen}
+
+\input{app_trial}
+
+\input{irb_application}
+
+\input{app_first}
+
+\input{app_second}
+
+\input{app_lists}
+
+\input{app_results}
+
+\end{document}

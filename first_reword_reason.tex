@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+	\begin{axis} [
+		xlabel=Number of heuristics,
+		grid=major,
+		legend pos=north east,
+		legend cell align=left,
+		xbar stacked,
+		xmin=0,
+		symbolic y coords={Too vague and general,Difficult to understand,Subjective,Multiple meanings,Incomplete,Not a heuristic,Domain-specific wording},
+	]
+		\addplot[fill=black!50] coordinates {
+			(3,Too vague and general)	(2,Difficult to understand)	(2,Subjective)	(1,Multiple meanings)	(1,Incomplete)	(1,Not a heuristic)	(0,Domain-specific wording)
+		};
+		\addlegendentry{\citet{Singh2009}}
+		
+		\addplot[fill=black] coordinates {
+			(0,Too vague and general)	(4,Difficult to understand)	(0,Subjective)	(0,Multiple meanings)	(0,Incomplete)	(1,Not a heuristic)	(5,Domain-specific wording)
+		};
+		\addlegendentry{\citet{Ardito2006}}
+	\end{axis}
+\end{tikzpicture}

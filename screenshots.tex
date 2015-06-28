@@ -1,0 +1,327 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[top=1cm, bottom=1.5cm, left=1cm, right=1cm]{geometry} %Page Margins
+\usepackage[hyphens]{url}
+\usepackage[hidelinks,pdfauthor={Bettina Lechner}]{hyperref}
+\usepackage{setspace}
+%\doublespacing
+
+\usepackage{graphicx} %advanced image options
+\usepackage{placeins} %Defined float barriers
+\usepackage{calc} %to calculate best dimensions for images:
+\newlength{\imgwidth}
+\newlength{\imgheight}
+\newlength{\finalwidth}
+\newlength{\finalheight}
+\newlength{\imgtextheight}
+\newcommand\scalegraphics[1]{%
+	\settowidth{\imgwidth}{\includegraphics{#1}}%
+	\settoheight{\imgheight}{\includegraphics{#1}}%
+	\ifnum\imgwidth>\imgheight \def\imgangle{90} \else \def\imgangle{0} \fi%
+	\setlength{\imgtextheight}{0.74\textheight}%
+	\setlength{\finalwidth}{\minof{\imgwidth}{\textwidth}}%
+	\setlength{\finalheight}{\minof{\imgheight}{\imgtextheight}}%
+	\ifnum\finalwidth=\imgwidth \def\imgangle{0} \fi%
+	\includegraphics[angle=\imgangle, width=\finalwidth, height=\finalheight, keepaspectratio]{#1}%
+}
+\newcommand{\downloadDate}{May 16, 2012}
+
+\pagestyle{plain}
+
+\begin{document}
+\section{Screen Shots of Selected CRM Software}
+\label{app:screenshots}
+
+\subsection{Microsoft Dynamics CRM}
+\label{appsec:microsoft}
+\subsubsection{Sales Account Information}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_account_list}
+	\caption[Microsoft Dynamics CRM: List of accounts]{List of accounts, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_account_detail}
+	\caption[Microsoft Dynamics CRM: Detail view of sales account]{Detail view of sales account, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Contact Information}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_contact_list}
+	\caption[Microsoft Dynamics CRM: List of contacts]{List of contacts, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_contact_detail}
+	\caption[Microsoft Dynamics CRM: Detail view of contact]{Detail view of contact, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Reports and Dashboards}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_reports}
+	\caption[Microsoft Dynamics CRM: List of reports]{List of reports, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/screen_msft_dashboard}
+	\caption[Microsoft Dynamics CRM: Business intelligence dashboard]{Business intelligence dashboard, retrieved from \url{http://www.liventerprise.com/tool/Microsoft_Dynamics_CRM/}, \downloadDate}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_home_screen}
+	\caption[Microsoft Dynamics CRM: Dashboard on home screen]{Dashboard on home screen, retrieved June, 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Customizability}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_customize_table}
+	\caption[Microsoft Dynamics CRM: Customize table with list of accounts]{Customize table with list of accounts, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/screen_msft_contact_detail2}
+	\caption[Microsoft Dynamics CRM: Form for customizing contact information]{Form for customizing contact information, retrieved from \url{http://blogs.msdn.com/b/dynamicscrmonline/archive/2009/01/20/tip-for-a-successful-import-using-the-import-wizard.aspx}, \downloadDate}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/screen_msft_workflow}
+	\caption[Microsoft Dynamics CRM: Customizing workflow information]{Customizing workflow information, retrieved from \url{http://imageshack.us/f/97/leadworkflow.jpg/}, \downloadDate}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Navigation Shortcuts}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_account_shortcuts}
+	\caption[Microsoft Dynamics CRM: Window with shortcuts to other accounts]{Window with shortcuts to other accounts, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_activity_shortcuts}
+	\caption[Microsoft Dynamics CRM: Window with shortcuts for recent activities]{Window with shortcuts for recent activities, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Miscellaneous}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_activity_list}
+	\caption[Microsoft Dynamics CRM: List of recent activities]{List of recent activities, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_what's_new}
+	\caption[Microsoft Dynamics CRM: ``What's new'' screen with recent activities of persons one is subscribed to]{``What's new'' screen with recent activities of persons one is subscribed to, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_calendar}
+	\caption[Microsoft Dynamics CRM: Calendar]{Calendar, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/msft_imports}
+	\caption[Microsoft Dynamics CRM: List of file import jobs]{List of file import jobs, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/dynamics/screen_msft_error}
+	\caption[Microsoft Dynamics CRM: Permissions error]{Permissions error, retrieved from \url{http://social.microsoft.com/Forums/en-US/crm/thread/ad41ccd0-ef3c-49aa-a7d6-de0c3cd66aca}, \downloadDate}
+\end{figure}
+
+\newpage
+\FloatBarrier %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{salesforce.com}
+\label{appsec:salesforce}
+
+\FloatBarrier
+\subsubsection{Sales Account Information}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_accounts}
+	\caption[salesforce.com: Overview screen of sales accounts]{Overview screen of sales accounts, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_account_detail}
+	\caption[salesforce.com: Detail view of sales account]{Detail view of sales account, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_account_edit}
+	\caption[salesforce.com: Editing view of sales account]{Editing view of sales account, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Contact Information}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_contacts}
+	\caption[salesforce.com: Overview screen of contacts]{Overview screen of contacts, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_contact_detail}
+	\caption[salesforce.com: Detail view of contact]{Detail view of contact, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_contact_edit}
+	\caption[salesforce.com: Editing view of contact]{Editing view of contact, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Sales Leads and Opportunities}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_leads}
+	\caption[salesforce.com: Overview screen of sales leads]{Overview screen of sales leads, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_lead_detail}
+	\caption[salesforce.com: Detail view of sales lead]{Detail view of sales lead, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_lead_creation}
+	\caption[salesforce.com: Editing view of sales lead]{Editing view of sales lead, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Reports and Dashboards}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_report_list}
+	\caption[salesforce.com: Overview screen of available reports]{Overview screen of available reports, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_report}
+	\caption[salesforce.com: Sample report]{Sample report, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_dashboard}
+	\caption[salesforce.com: Business intelligence dashboard]{Business intelligence dashboard, retrieved from \url{http://thirdwaveconsulting.com/grants-management/}, \downloadDate}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_home}
+	\caption[salesforce.com: Home screen]{Home screen, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Customizability}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_customize}
+	\caption[salesforce.com: Display customization]{Display customization, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_customize_tabs}
+	\caption[salesforce.com: Tab customization]{Tab customization, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_customize_contact}
+	\caption[salesforce.com: Contact screen customization]{Contact screen customization, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Knowledge Management and Customer Service}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_solution_list}
+	\caption[salesforce.com: Overview screen of customer service problem solutions]{Overview screen of customer service problem solutions, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_solution_detail}
+	\caption[salesforce.com: Detail view of customer service problem solution]{Detail view of customer service problem solution, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_solution_edit}
+	\caption[salesforce.com: Editing view of customer service problem solution]{Editing view of customer service problem solution, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_call_log}
+	\caption[salesforce.com: Detail view of customer service call log]{Detail view of customer service call log, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_case_log}
+	\caption[salesforce.com: Detail view of customer service case log]{Detail view of customer service case log, retrieved June 4, 2012}
+\end{figure}
+
+\newpage
+\FloatBarrier
+\subsubsection{Social Media Features}
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_profile}
+	\caption[salesforce.com: Personal profile]{Personal profile, retrieved June 4, 2012}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_company_feed}
+	\caption[salesforce.com: Company news feed]{Company news feed, retrieved from \url{http://isolsoft.com/salesforce-software-review/}, \downloadDate}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\scalegraphics{./img/force/frce_contact_chatter}
+	\caption[salesforce.com: ``Chatter'' feed for sales contact]{``Chatter'' feed for sales contact, retrieved June 4, 2012}
+\end{figure}
+
+\end{document}
